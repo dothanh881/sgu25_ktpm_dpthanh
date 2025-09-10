@@ -10,15 +10,15 @@ using namespace std;
         return 2 * x;
     }
 
-    int main(){
-        int x;
-        x = 10;
-        cout << "f2(" << x << ") = " << f2(x) << endl;
-        x = 0;
-        cout << "f2(" << x << ") = " << f2(x) << endl;
-        x = -5;
-        cout << "f2(" << x << ") = " << f2(x) << endl;
-        x = 13;
-        cout << "f2(" << x << ") = " << f2(x) << endl;
-        return 0;
-    }
+  int main(){
+    int x;
+    x = 10;
+    cout << "f2(" << x << ") = " << f2(x) << endl;   // TC1
+    x = 0;
+    cout << "f2(" << x << ") = " << f2(x) << endl;    // TC2
+    x = 4;
+    cout << "f2(" << x << ") = " << f2(x) << endl;    // TC3
+    x = 14;
+    cout << "f2(" << x << ") = " << f2(x) << endl;    // TC4
+    return 0;
+}

@@ -12,28 +12,41 @@ using namespace std;
     return max;
     }
 
-    int main(){
-        int num1, num2, num3;
-        int max;
-        num1 = 6, num2 = 3, num3 = 1;
-        max = findMax(num1, num2, num3);
-        cout << "Các số ( " << num1 << ", " << num2 << ", " << num3 << " )" << endl << " => Số lớn nhất là: " << max << endl;
-        num1 = 4, num2 = 7, num3 = 2;
-        max = findMax(num1, num2, num3);
-        cout << "Các số ( " << num1 << ", " << num2 << ", " << num3 << " )" << endl << " => Số lớn nhất là: " << max << endl;
-        num1 = 2, num2 = 3, num3 = 8;
-        max = findMax(num1, num2, num3);
-        cout << "Các số ( " << num1 << ", " << num2 << ", " << num3 << " )" << endl << " => Số lớn nhất là: " << max << endl;
-        num1 = 5, num2 = 5, num3 = 2;
-        max = findMax(num1, num2, num3);
-        cout << "Các số ( " << num1 << ", " << num2 << ", " << num3 << " )" << endl << " => Số lớn nhất là: " << max << endl;
-        num1 = 4, num2 = 7, num3 = 7;
-        max = findMax(num1, num2, num3);
-        cout << "Các số ( " << num1 << ", " << num2 << ", " << num3 << " )" << endl << " => Số lớn nhất là: " << max << endl;
-        num1 = 9, num2 = 3, num3 = 9;
-        max = findMax(num1, num2, num3);
-        cout << "Các số ( " << num1 << ", " << num2 << ", " << num3 << " )" << endl << " => Số lớn nhất là: " << max << endl;
-        num1 = 7, num2 = 7, num3 = 7;
-        max = findMax(num1, num2, num3);
-        cout << "Các số ( " << num1 << ", " << num2 << ", " << num3 << " )" << endl << " => Số lớn nhất là: " << max << endl;
-    }
+int main() {
+    int num1, num2, num3, max;
+
+    // TC1
+    num1 = 12; num2 = -5; num3 = -8;
+    max = findMax(num1, num2, num3);
+    cout << "Các số (" << num1 << ", " << num2 << ", " << num3 << ") => Max: " << max << endl;
+
+    // TC2
+    num1 = -3; num2 = 7; num3 = -1;
+    max = findMax(num1, num2, num3);
+    cout << "Các số (" << num1 << ", " << num2 << ", " << num3 << ") => Max: " << max << endl;
+
+    // TC3
+    num1 = -4; num2 = -2; num3 = 5;
+    max = findMax(num1, num2, num3);
+    cout << "Các số (" << num1 << ", " << num2 << ", " << num3 << ") => Max: " << max << endl;
+
+    // TC4
+    num1 = 6; num2 = 6; num3 = 3;
+    max = findMax(num1, num2, num3);
+    cout << "Các số (" << num1 << ", " << num2 << ", " << num3 << ") => Max: " << max << endl;
+
+    // TC5
+    num1 = 2; num2 = 9; num3 = 9;
+    max = findMax(num1, num2, num3);
+    cout << "Các số (" << num1 << ", " << num2 << ", " << num3 << ") => Max: " << max << endl;
+
+    // TC6
+    num1 = -7; num2 = 3; num3 = -7;
+    max = findMax(num1, num2, num3);
+    cout << "Các số (" << num1 << ", " << num2 << ", " << num3 << ") => Max: " << max << endl;
+
+    // TC7
+    num1 = -2; num2 = -2; num3 = -2;
+    max = findMax(num1, num2, num3);
+    cout << "Các số (" << num1 << ", " << num2 << ", " << num3 << ") => Max: " << max << endl;
+}

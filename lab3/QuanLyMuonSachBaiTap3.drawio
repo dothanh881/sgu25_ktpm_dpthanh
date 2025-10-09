@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.5">
+  <diagram name="Borrow Management Module" id="RA9jO_chHUy48stqfsEb">
+    <mxGraphModel dx="2160" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZjOweyGOwRraoE50F6cO-1" value="BorrowController&#xa;+checkout(request)&#xa;+returnBook(request)&#xa;+renew(request)&#xa;+getHistory(userId)" style="shape=rectangle;whiteSpace=wrap;rounded=0;fontSize=13;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="30" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-2" value="BorrowService&#xa;+checkout(userId, copyId)&#xa;+returnBook(userId, copyId)&#xa;+renew(userId, copyId)" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="260" y="30" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-3" value="BorrowRepository&#xa;+save(record)&#xa;+findActiveByCopyId(copyId)&#xa;+findByUser(userId)" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="600" y="40" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-4" value="InventoryRepository&#xa;+findCopy(copyId)&#xa;+updateAvailability(copyId, status)" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="490" y="195" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-5" value="BorrowRecord&#xa;-id: UUID&#xa;-userId: UUID&#xa;-copyId: UUID&#xa;-borrowDate: DateTime&#xa;-dueDate: DateTime&#xa;-returnDate: DateTime?&#xa;-status: BORROWED/RETURNED/OVERDUE" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="900" y="20" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-6" value="User&#xa;-id: UUID&#xa;-name: String&#xa;-memberSince: Date&#xa;-status: ACTIVE/SUSPENDED&#xa;-fines: Decimal" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="770" y="220" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-7" value="PaymentAdapter&#xa;+chargeFine(userId, amount): PaymentResult" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="210" y="205" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-8" value="NotificationAdapter&#xa;+sendDueReminder(userId, recordId)&#xa;+sendOverdueNotice(userId, recordId)" style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="200" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-9" style="endArrow=block;endFill=1;" edge="1" parent="1" source="ZjOweyGOwRraoE50F6cO-1" target="ZjOweyGOwRraoE50F6cO-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-10" style="endArrow=block;endFill=1;" edge="1" parent="1" source="ZjOweyGOwRraoE50F6cO-2" target="ZjOweyGOwRraoE50F6cO-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-11" style="endArrow=block;endFill=1;" edge="1" parent="1" source="ZjOweyGOwRraoE50F6cO-2" target="ZjOweyGOwRraoE50F6cO-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-12" style="endArrow=block;endFill=1;" edge="1" parent="1" source="ZjOweyGOwRraoE50F6cO-2" target="ZjOweyGOwRraoE50F6cO-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-13" style="endArrow=block;endFill=1;" edge="1" parent="1" source="ZjOweyGOwRraoE50F6cO-2" target="ZjOweyGOwRraoE50F6cO-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-14" style="endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="ZjOweyGOwRraoE50F6cO-3" target="ZjOweyGOwRraoE50F6cO-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-15" style="endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="ZjOweyGOwRraoE50F6cO-4" target="ZjOweyGOwRraoE50F6cO-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjOweyGOwRraoE50F6cO-16" style="endArrow=open;endFill=0;" edge="1" parent="1" source="ZjOweyGOwRraoE50F6cO-5" target="ZjOweyGOwRraoE50F6cO-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

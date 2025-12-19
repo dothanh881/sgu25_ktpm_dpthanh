@@ -1,4 +1,5 @@
-# SGU25 - Hồ sơ minh chứng học phần Kỹ Thuật Phần Mềm (KTPM)
+
+# SGU25 - Minh chứng học phần Kỹ Thuật Phần Mềm (KTPM)
 
 - **Sinh viên:** Đỗ Phú Thành
 - **MSSV:** 3122411189

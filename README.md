@@ -8,7 +8,7 @@
 **Mục đích repo**
 
 Dưới đây là đường dẫn Google Drive của nhóm, nơi lưu trữ đầy đủ và minh bạch các tài liệu phân công công việc, kế hoạch, cũng như toàn bộ minh chứng trong suốt quá trình thực hiện bài tập nhóm của học phần Kiểm thử phần mềm.
-
+https://docs.google.com/spreadsheets/d/11sreukZ9IAoLPrUzEO1mA4_ukbeBnbvPY68yhvN2-aY/edit?usp=sharing
 
 ---
 
